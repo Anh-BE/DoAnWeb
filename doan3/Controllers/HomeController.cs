@@ -123,11 +123,16 @@ namespace doan3.Controllers
             return View("TimKiemPhim");
         }
 
+        public ActionResult T()
+        {
+            Console.Write("xin chao");
+            return View();
+        }
 
 
 
 
-        
+
 
 
 
