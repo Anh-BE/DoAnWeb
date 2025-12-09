@@ -1,1 +1,4 @@
+# Ignore bin, obj, and .vs folders
+/doan3/bin/
+/doan3/obj/
 .vs/
