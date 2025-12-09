@@ -1,0 +1,17 @@
+# Các tệp tạm của Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Các thư mục build
+bin/
+obj/
+
+# Thư mục gói NuGet
+packages/
+
+# Các tệp cấu hình của Web.config (nếu không muốn đẩy)
+Web.Release.config
+Web.Debug.config

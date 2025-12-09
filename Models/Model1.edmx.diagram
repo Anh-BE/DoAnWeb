@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="3b5512e933164a6f9afae87aca38b98a" Name="Diagram1">
+        <EntityTypeShape EntityType="DatVeXemPhimModel.Chi_Tiet_Ve" Width="1.5" PointX="7.5" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatVeXemPhimModel.Don_Dat_Ve" Width="1.5" PointX="5.25" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatVeXemPhimModel.Ghe_Ngoi" Width="1.5" PointX="5.25" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatVeXemPhimModel.Khach_Hang" Width="1.5" PointX="3" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatVeXemPhimModel.Khoa_Ghe_Tam_Thoi" Width="1.5" PointX="10.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatVeXemPhimModel.Lich_Chieu" Width="1.5" PointX="5.25" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatVeXemPhimModel.NguoiDung" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatVeXemPhimModel.NhomNguoiDung" Width="1.5" PointX="1.5" PointY="16" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatVeXemPhimModel.Phim" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatVeXemPhimModel.Phong_Chieu" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatVeXemPhimModel.Rap_Chieu" Width="1.5" PointX="0.75" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatVeXemPhimModel.TheLoai" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="DatVeXemPhimModel.TienVe" Width="1.5" PointX="5.25" PointY="18.625" IsExpanded="true" />
+        <AssociationConnector Association="DatVeXemPhimModel.FK__Chi_Tiet___DonDa__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="DatVeXemPhimModel.FK__Chi_Tiet___GheID__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="DatVeXemPhimModel.FK__Chi_Tiet___LichC__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="DatVeXemPhimModel.FK__Chi_Tiet___LoaiG__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="DatVeXemPhimModel.FK__Don_Dat_V__Khach__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="DatVeXemPhimModel.FK__Ghe_Ngoi__PhongI__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="DatVeXemPhimModel.FK__Khoa_Ghe___GheID__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="DatVeXemPhimModel.FK__Khach_Han__UserI__412EB0B6" ManuallyRouted="false" />
+        <AssociationConnector Association="DatVeXemPhimModel.FK__Khoa_Ghe___Khach__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="DatVeXemPhimModel.FK__Khoa_Ghe___LichC__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="DatVeXemPhimModel.FK__Lich_Chie__PhimI__5535A963" ManuallyRouted="false" />
+        <AssociationConnector Association="DatVeXemPhimModel.FK__Lich_Chie__Phong__5629CD9C" ManuallyRouted="false" />
+        <AssociationConnector Association="DatVeXemPhimModel.FK__NguoiDung__Group__3A81B327" ManuallyRouted="false" />
+        <AssociationConnector Association="DatVeXemPhimModel.FK__Phim__MaTheLoai__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="DatVeXemPhimModel.FK__Phong_Chi__RapID__4CA06362" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

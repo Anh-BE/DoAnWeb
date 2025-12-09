@@ -1,0 +1,304 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>@ViewBag.Title - MOVANA</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background-color: #060922;
+            color: #fff;
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 0.95rem;
+        }
+
+        .content-wrapper {
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        /* HEADER */
+        .header-container {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #060922;
+            border-bottom: 1px solid #15183c;
+            z-index: 9999;
+        }
+
+        .navbar-top {
+            padding: 0.6rem 0;
+        }
+
+            .navbar-top .content-wrapper,
+            .sub-navbar .content-wrapper {
+                max-width: 1300px;
+                margin: 0 auto;
+                padding: 0 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                box-sizing: border-box;
+            }
+
+        .navbar {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+        }
+
+        .navbar-brand {
+            color: #e2001a !important;
+            font-size: 1.6rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            margin: 0;
+        }
+
+            .navbar-brand img {
+                height: 38px;
+                margin-right: 8px;
+            }
+
+        .search-box {
+            position: relative;
+            width: 350px;
+        }
+
+            .search-box input {
+                width: 100%;
+                height: 42px;
+                border-radius: 21px;
+                border: none;
+                padding-left: 42px;
+                padding-right: 15px;
+                font-size: 0.95rem;
+                color: #333;
+                outline: none;
+            }
+
+                .search-box input::placeholder {
+                    color: #777;
+                    font-style: italic;
+                }
+
+            .search-box i {
+                position: absolute;
+                left: 15px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: #999;
+                font-size: 1rem;
+            }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+            .nav-right .nav-link {
+                color: #fff !important;
+                font-weight: 500;
+            }
+
+                .nav-right .nav-link:hover {
+                    color: #f9e000 !important;
+                }
+
+        .flag-icon {
+            height: 18px;
+            margin-right: 5px;
+        }
+
+        /* SUB NAVBAR */
+        .sub-navbar {
+            background-color: #060922;
+            border-top: 1px solid #15183c;
+            border-bottom: 1px solid #15183c;
+            padding: 0.5rem 0;
+            margin-top: 10px;
+        }
+
+        .sub-nav-item a {
+            color: #fff !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+        }
+
+            .sub-nav-item a:hover {
+                color: #f9e000 !important;
+            }
+
+        /* MAIN CONTENT OFFSET */
+        .main-content {
+            padding-top: 130px;
+        }
+
+        footer {
+            background-color: #060922;
+            border-top: 1px solid #15183c;
+            padding: 20px 0;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+            footer a {
+                color: #ccc;
+                margin: 0 5px;
+                text-decoration: none;
+            }
+    </style>
+</head>
+
+<body>
+
+    <!-- ⭐ HEADER GIỮ NGUYÊN 100% ⭐ -->
+    <div class="header-container">
+        <div class="navbar-top">
+            <div class="content-wrapper">
+
+                <a class="navbar-brand" href="@Url.Action("PhimDangChieu", "Home")">
+                    <img src="/Images/Logo.png" alt="MOVANA Logo" />MOVANA
+                </a>
+
+                <div class="d-flex align-items-center" style="gap: 25px;">
+                    <form method="post" action="/Home/TimKiemPhim" class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text"
+                               name="tenphim"
+                               placeholder="Tìm phim..."
+                               autocomplete="off" />
+                    </form>
+
+                    <div class="nav-right">
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                <i class="fas fa-user-circle"></i> Đăng nhập
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                @Html.ActionLink("Đăng nhập", "Index_DangNhap", "Login", null, new { @class = "dropdown-item" })
+                                @Html.ActionLink("Đăng ký", "Register", "Account", null, new { @class = "dropdown-item" })
+                            </div>
+                        </div>
+
+                        <div class="dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                                <img src="/Images/vietnam_flag.png" class="flag-icon" /> VN
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                <a class="dropdown-item" href="#"><img src="/Images/vietnam_flag.png" class="flag-icon" /> Vietnamese</a>
+                                <a class="dropdown-item" href="#"><img src="/Images/english_flag.png" class="flag-icon" /> English</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- ⭐ SUB NAVBAR PHÂN QUYỀN ⭐ -->
+        @{
+            // mặc định user nếu chưa đăng nhập
+            string role = "Customer";
+
+            if (Session["SESSION_GROUP"] != null)
+            {
+                var groups = (List<string>)Session["SESSION_GROUP"];
+                role = groups.FirstOrDefault();
+            }
+        }
+
+        <nav class="sub-navbar"> 
+            <div class="content-wrapper d-flex justify-content-between align-items-center">
+
+                <!-- BÊN TRÁI -->
+                <div class="d-flex">
+
+                    <!-- USER -->
+                    @if (role == "Customer")
+                    {
+                        <div class="sub-nav-item dropdown rap-hover">
+                            <a href="#" class="dropdown-toggle text-white">
+                                <i class="fas fa-map-marker-alt"></i> Chọn rạp
+                            </a>
+                            @Html.Action("TenRap_PartialView", "TenRap")
+                        </div>
+
+                        <div class="sub-nav-item dropdown theloai-hover">
+                            <a href="#" class="dropdown-toggle text-white">
+                                Thể loại
+                            </a>
+                            @Html.Action("TheLoai_PartialView", "TheLoai")
+                        </div>
+
+                        <div class="sub-nav-item">
+                            @Html.ActionLink("Giới thiệu", "About", "Home")
+                        </div>
+                    }
+
+                    <!-- ADMIN -->
+                    @if (role == "Admin")
+                    {
+                        <div class="sub-nav-item">
+                            @Html.ActionLink("Thêm Phim", "ThemPhim", "ChucNang_Admin")
+                        </div>
+                    }
+
+                </div>
+
+                <!-- BÊN PHẢI -->
+                <div class="d-flex">
+
+                    @if (role == "Admin")
+                    {
+                        <div class="sub-nav-item">
+                            @Html.ActionLink("Tổ chức sự kiện", "Events", "Home")
+                        </div>
+                        <div class="sub-nav-item">
+                            @Html.ActionLink("Dịch vụ giải trí khác", "Services", "Home")
+                        </div>
+                    }
+
+                </div>
+
+            </div>
+        </nav>
+
+    </div>
+
+    <!-- MAIN -->
+    <div class="main-content">
+        <div class="content-wrapper">
+            <div class="py-4">@RenderBody()</div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="content-wrapper">
+            &copy; @DateTime.Now.Year - MOVANA Booking System |
+            @Html.ActionLink("Giới thiệu", "About", "Home") |
+            @Html.ActionLink("Liên hệ", "Contact", "Home") |
+            @Html.ActionLink("Chính sách bảo mật", "Privacy", "Home")
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
