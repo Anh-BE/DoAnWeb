@@ -123,11 +123,18 @@ namespace doan3.Controllers
             return View("TimKiemPhim");
         }
 
+        public ActionResult test()
+        {
+            return View();
+        }
+
+        public ActionResult test2()
+        {
+            return View();
+        }
 
 
 
-
-        
 
 
 
